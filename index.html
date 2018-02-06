@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pixel Art Maker!</title>
+    <link href="https://fonts.googleapis.com/css?family=Monoton|Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="site-content">
+        <div class="column column--left">
+            <h2>Choose Grid Size</h2>
+            <form id="sizePicker" class="form form--default">
+                <div class="field-group">
+                    <label for="height">Grid Height:</label>
+                    <input type="number" id="inputHeight" class="js-grid-height" name="height" min="1" max="30" value="10">
+                </div>
+                <div class="field-group">
+                    <label for="width">Grid Width:</label>
+                    <input type="number" id="inputWidth" class="js-grid-width" name="width" min="1" max="30" value="10">
+                </div>
+                <button type="submit" class="btn btn--secondary js-submit"> Submit </button>
+            </form>
+            <div class="field-group">
+                <h2>Pick A Color</h2>
+                <input type="color" id="colorPicker" class="js-color-picker">
+            </div>
+            <h1>Lab: Pixel Art Maker</h1>
+
+        </div>
+        <div class="column column--right">
+            <h2>Design Canvas</h2>
+            <div id="pixelCanvas" class="board js-board">
+            </div>
+            <button type="button" class="btn btn--primary js-clear-canvas">Clear canvas</button>
+        </div>
+    </div>
+    <script
+      src="http://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+    <script src="designs.js"></script>
+</body>
+</html>

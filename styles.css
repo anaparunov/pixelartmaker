@@ -1,0 +1,128 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+}
+
+h1 {
+    font-family: 'Monoton', cursive;
+    font-size: 70px;
+    margin: 70px 0 20px 0;
+    color: #a951ed;
+}
+
+h2 {
+    margin: 1em 0 0.25em;
+    font-size: 24px;
+}
+
+/* Site Layout */
+.site-content {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.site-content::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column {
+    float: left;
+    width: 50%;
+    margin: 0;
+    padding: 0 10px;
+}
+
+.column--left {
+    width: 40%;
+}
+
+.column--right {
+    width: 60%;
+}
+
+/* Inputs */
+input[type=number] {
+    width: 6em;
+    height: 60px;
+    padding: 10px;
+}
+
+label {
+    margin: 0 5px;
+}
+.field-group {
+    margin: 0 0 20px 0;
+}
+
+/* Buttons */
+button,
+.btn {
+    white-space: nowrap;
+    box-shadow: none;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    user-select: none;
+    background-image: none;
+    border: 0;
+    border-radius: 0;
+    text-decoration: none;
+    background-color: transparent;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1;
+    text-align: center;
+    padding: 12px 30px 10px 30px;
+    letter-spacing: 2px;
+    color: white;
+}
+
+button:focus{
+    outline: none
+}
+
+.btn--primary {
+  color: white;
+  background-color: #ffa234cc;
+}
+
+.btn--secondary {
+  color: white;
+  background-color: #02b3e4;
+}
+
+/* Board */
+.board{
+    width: 100%;
+    border: 1px solid rgba(0,0,0,0.05);
+    margin-bottom: 20px;
+}
+.board__row {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.board__row .field{
+    -ms-flex: 1 1;
+    flex: 1;
+    cursor: pointer;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.board__row .field::before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
